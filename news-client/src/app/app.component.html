@@ -1,0 +1,27 @@
+<!-- Navbar -->
+<nav class="navbar navbar-dark bg-dark inline">
+  <a class="navbar-brand ml-3" href="#">
+    <h4> VPBay </h4>
+  </a>
+  <a class="navbar-brand" href="#"> Home </a>
+  <a class="navbar-brand" href="#"> About </a>
+  <a class="navbar-brand" href="#"> Contact </a>
+  <div class="navbar-brand float-right">
+    <div *ngIf="isLoggedIn()" class="nav-item">
+      <a class="nav-link" (click)="logout()"> Logout </a>
+    </div>
+    <div *ngIf="!isLoggedIn()" class="nav-item">
+      <a routerLink="/login" class="nav-link">Login</a>
+    </div>
+  </div>
+</nav>
+
+<!-- Jumbotron -->
+<div class="container theme-showcase" role="main">
+  <div class="jumbotron">
+    <h1> VPBay </h1>
+    <p> Buy and sell. Wheel and deal. Fools and horses </p>
+  </div>
+</div>
+
+<router-outlet></router-outlet>

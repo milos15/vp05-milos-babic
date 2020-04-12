@@ -1,0 +1,9 @@
+nav a {
+    color: white;
+    font-size: 1em;
+}
+
+.inline {
+    display: inline-block;
+    width: 100%;
+}

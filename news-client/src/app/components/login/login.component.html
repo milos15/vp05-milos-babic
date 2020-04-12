@@ -1,0 +1,15 @@
+<div class="col-3 container my-5 py-5">
+    <h3>Sign in</h3>
+
+    <form class="form-group" (ngSubmit)="login()">
+        <input class="form-control" type="text" id="username" name="username" [(ngModel)]="user.username"
+            placeholder="Username" required autofocus>
+        <input class="form-control" type="password" id="inputPassword" name="username" [(ngModel)]="user.password"
+            placeholder="Password" required>
+        <button class="btn btn-primary btn-block mt-2" type="submit">Sign in</button>
+    </form>
+    <br>
+    <div *ngIf=wrongUsernameOrPass role="alert">
+        Wrong username or password.
+    </div>
+</div>
